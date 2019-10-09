@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose File"
+        android:layout_below="@id/capture_image"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/capture_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Capture"
+        android:layout_below="@+id/image_view"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/save_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Save Gallery"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/capture_image"
+        android:layout_below="@+id/image_view"/>
+
+    <EditText
+        android:id="@+id/edit_text_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/button_choose_image"
+        android:hint="Enter File Name"
+        android:layout_below="@id/capture_image"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/button_choose_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Cloud"
+        android:layout_below="@+id/image_view"
+        android:layout_toRightOf="@id/capture_image"
+        style="@style/Widget.AppCompat.Button.Colored"
+
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/text_view_show_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="Show Uploads"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_below="@id/capture_image"
+        android:layout_toRightOf="@+id/button_choose_image"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+</RelativeLayout>
